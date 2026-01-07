@@ -1,0 +1,21 @@
+
+model:
+  type: conv
+  input_shape: [1, 128, 128]  # (channels, height, width)
+  latent_dim: 32
+
+training:
+  epochs: 150
+  batch_size: 16  # Smaller batch for CNN
+  learning_rate: 0.001
+  beta: 1.0
+
+data:
+  normalize: true
+
+output:
+  model_path: project/models/vae_conv.pth
+  checkpoint_interval: 10
+
+
+

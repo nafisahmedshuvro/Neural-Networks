@@ -1,0 +1,22 @@
+
+model:
+  type: basic
+  input_dim: null  # Will be inferred from data
+  latent_dim: 32
+  hidden_dims: [128, 64]
+
+training:
+  epochs: 200
+  batch_size: 32
+  learning_rate: 0.001
+  beta: 4.0  # Higher beta for better disentanglement
+
+data:
+  normalize: true
+
+output:
+  model_path: project/models/vae_beta.pth
+  checkpoint_interval: 10
+
+
+

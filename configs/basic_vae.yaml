@@ -1,0 +1,23 @@
+
+
+model:
+  type: basic
+  input_dim: null  # Will be inferred from data
+  latent_dim: 32
+  hidden_dims: [128, 64]
+
+training:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  beta: 1.0  # Standard VAE (use >1.0 for Beta-VAE)
+
+data:
+  normalize: true
+
+output:
+  model_path: project/models/vae_basic.pth
+  checkpoint_interval: 10  # Save every N epochs
+
+
+
